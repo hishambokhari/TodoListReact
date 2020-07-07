@@ -8,7 +8,11 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <h1>{this.state.message}</h1>
+        <h3>{this.state.message}</h3>
+        <form>
+          <label htmlFor="newTodo">New Todo</label>
+          <input id="newTodo" name="newTodo" />
+        </form>
       </div>
     );
   }
