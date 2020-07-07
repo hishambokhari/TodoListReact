@@ -11,7 +11,7 @@ class App extends Component {
   formSubmitted(event) {
     event.preventDefault();
     this.setState({
-      todos: [...this.state.todo, {
+      todos: [...this.state.todos, {
         title: this.state.newTodo,
         done: false
       }]
@@ -32,8 +32,12 @@ class App extends Component {
           <label htmlFor="newTodo">New Todo</label>
           <input onChange={(event) => this.newTodoChanged(event)} id="newTodo" name="newTodo" />
           <button type="submit">Add Todo</button>
-          
         </form>
+        <ul>
+          {this.state.todos.map(todo => {
+            return <li key={todo.title}>{todo.title}</li>
+          })}
+        </ul>
       </div>
     );
   }
