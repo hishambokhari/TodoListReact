@@ -4,7 +4,8 @@ import './App.css';
 class App extends Component {
   state = {
     message: 'This message is from the state',
-    newTodo: ''
+    newTodo: '',
+    todos: []
   }
 
   formSubmitted(event) {
