@@ -10,8 +10,12 @@ class App extends Component {
 
   formSubmitted(event) {
     event.preventDefault();
-
-    console.log(this.state.newTodo);
+    this.setState({
+      todos: [...this.state.todo, {
+        title: this.state.newTodo,
+        done: false
+      }]
+    })
   }
 
   newTodoChanged(event) {
