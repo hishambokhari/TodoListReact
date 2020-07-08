@@ -36,7 +36,10 @@ class App extends Component {
         </form>
         <ul>
           {this.state.todos.map(todo => {
-            return <li key={todo.title}>{todo.title}</li>
+            return (
+            <li key={todo.title}>
+              <input type="checkbox"/>{todo.title}
+            </li>)
           })}
         </ul>
       </div>
